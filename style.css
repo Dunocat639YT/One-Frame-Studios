@@ -1,11 +1,80 @@
 * {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: #0c0c0c;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0c0c0c;
+  padding: 20px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo img {
+  width: 100px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff3130;
+  transform: scale(1.1);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff3130;
+  transition: width 0.3s ease-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .hero {
@@ -83,13 +152,12 @@ body {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: background-color 0.3s;
-  transition: scale 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .button:hover {
   background-color: #c52727;
-  scale: 1.1;
+  transform: scale(1.1);
 }
 
 .title {
@@ -100,6 +168,7 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
   position: relative;
   width: fit-content;
 }
@@ -120,6 +189,28 @@ body {
 }
 
 @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0c0c0c;
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    width: 200px;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
   /* Canvia la direcció del flex: de fila a columna */
   .hero {
     flex-direction: column;
