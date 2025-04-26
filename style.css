@@ -32,42 +32,47 @@ body {
   font-weight: 500;
   margin-bottom: 1rem;
   line-height: 1.5;
-  position: relative;
 }
 
 .hero-content h1 strong {
-  display: inline-block;
-  position: relative;
   font-weight: bold;
   font-size: 5rem;
+}
+
+/* Classe reutilitzable per a subratllat amb hover i canvi de color */
+.highlight {
   position: relative;
-  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+  font-weight: bold;
+  font-size: inherit; /* Hereda la mida de la font */
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: default;
 }
 
-.hero-content h1 strong:hover {
-  color: #ff3130;
-  transform: scale(1.05);
-}
-
-.hero-content h1 strong::after {
+.highlight::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -5px;
   width: 0;
   height: 5px;
-  background-color: #ff3130;
+  background-color: #ff3130; /* Color inicial del subratllat */
   transition: width 0.3s ease-out;
 }
 
-.hero-content h1 strong:hover::after {
-  width: 100%;
+.highlight:hover {
+  color: #ff3130; /* Color del text quan es fa hover */
+  transform: scale(1.05); /* Efecte de creixement del text */
+}
+
+.highlight:hover::after {
+  width: 100%; /* Quan es fa hover, la línia de subratllat s'expandeix */
 }
 
 .hero-content p {
   color: whitesmoke;
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .button {
@@ -85,6 +90,33 @@ body {
 .button:hover {
   background-color: #c52727;
   scale: 1.1;
+}
+
+.title {
+  display: block;
+  font-size: 5rem;
+  font-weight: bold;
+  color: rgb(255, 49, 48);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.about-content p {
+  color: whitesmoke;
+  font-size: 2rem;
+  margin-left: 20vh;
+  margin-right: 20vh;
+}
+
+.about-content a {
+  max-width: 150px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 150px;
 }
 
 @media (max-width: 768px) {
