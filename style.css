@@ -32,12 +32,15 @@ body {
   font-weight: 500;
   margin-bottom: 1rem;
   line-height: 1.5;
+  position: relative;
 }
 
 .hero-content h1 strong {
-  display: block;
+  display: inline-block;
+  position: relative;
   font-weight: bold;
   font-size: 5rem;
+  position: relative;
   transition: color 0.3s, transform 0.3s;
 }
 
@@ -50,9 +53,9 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -5px;
   width: 0;
-  height: 0;
+  height: 5px;
   background-color: #ff3130;
   transition: width 0.3s ease-out;
 }
