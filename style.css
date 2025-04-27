@@ -243,9 +243,6 @@ body {
   text-decoration: none;
 }
 
-.social-media a {
-}
-
 @media (max-width: 768px) {
   .nav-links {
     display: none;
