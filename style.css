@@ -15,8 +15,11 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #0c0c0c;
-  padding: 20px 50px;
+  padding: 0px 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar .logo img {
