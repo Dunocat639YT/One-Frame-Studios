@@ -277,6 +277,13 @@ body {
   cursor: pointer;
 }
 
+.games-content li {
+  color: whitesmoke;
+  text-align: left;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
 .games-content img {
   width: 100%;
   height: 100%;
