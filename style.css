@@ -315,6 +315,21 @@ body {
   font-size: 5rem;
 }
 
+form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #ff3130;
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
